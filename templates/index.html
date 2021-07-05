@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../static/css/style.css">
+
+    <!-- Javascript-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    
+    <link rel="shortcut icon" href="../static/pictures/favicon.ico">
+
+    <title>IXA-Taldea {{title}} </title>
+</head>
+
+<body>
+    <!-- MENU START -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="http://ixa.si.ehu.es/"> <img src="../static/pictures/ixa-logo.png" width="30" height="30"
+                class="d-inline-block align-top" alt="ixa-team logo">
+            IXA Taldea</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Menu items -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                
+                 <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                    
+                <li class="nav-item">
+                    <a class="nav-link" href="/text_image">Text to Image</a>
+                </li>
+                 
+            </ul>
+        </div>
+    </nav>
+    <!-- MENU END -->
+
+    <!-- CONTENT START -->
+    <div class="container">
+        <div class="application">
+            <!-- Show jumbotron with general information-->
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">Ixa Taldea</h1>
+                    <p class="lead">Computer vision related machine learning applications.</p>
+                </div>
+            </div>
+            <!-- For each app create a new deck-->
+            <div class="cardDeck">
+                <div class="card-deck">
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Text to Image</h5>
+                            <p class="card-text">Text-to-Image Generation is the task of generating an image conditioned on the input text.</p>
+                            <a href="/text_image" class="btn btn-primary">Check it now!</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CONTENT END -->
+    
+    <!-- FOOTER START-->
+    <footer class="page-footer font-small">
+        <!-- COPYRIGHT START -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="http://ixa.si.ehu.es/"> http://ixa.si.ehu.es/</a>
+        </div>
+        <!-- COPYRIGHT END -->
+    </footer>
+    <!-- FOOTER END -->
+</body>
+
+</html>
