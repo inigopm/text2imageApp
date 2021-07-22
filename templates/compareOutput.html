@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../static/css/style.css">
+
+    <!-- Javascript-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <link rel="shortcut icon" href="../static/pictures/favicon.ico">
+
+    <title>IXA-Taldea {{title}} </title>
+</head>
+
+<body>
+    <!-- MENU START -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="http://ixa.si.ehu.es/"> <img src="../static/pictures/ixa-logo.png" width="30" height="30"
+                class="d-inline-block align-top" alt="ixa-team logo">
+            IXA Taldea</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Menu items -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                
+                 <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                    
+                <li class="nav-item active">
+                    <a class="nav-link" href="/text_image">Text to Image</a>
+                </li>
+                 
+            </ul>
+        </div>
+    </nav>
+    <!-- MENU END -->
+
+    <!-- CONTENT START -->
+    <div class="container">
+        <!-- Show input information-->
+        <div class="application">
+            <h3>Input </h3>
+            <hr>
+            <h5>Application: Text to image.</h5>
+            <h5>Models used: <br> DM-GAN and Attn-GAN</h5>
+            <h5>Text: {{texts}}</h5>
+        </div>
+        <!-- Show output information-->
+        <div class="application">
+            <h3>Output</h3>
+            <hr>
+            <div id="faq" role="tablist" aria-multiselectable="true">
+                    <!-- Generate the collapse card for each model -->
+                    <div class="card">
+                        <div class="card-header" role="tab" id="collapse">
+                            <h5 class="card-title" style="margin-top: 1%;">
+                                <a data-toggle="collapse" data-parent="#faq" href="#collapseContent" aria-expanded="true" aria-controls="collapseContent">Models</a>
+                            </h5>
+                        </div>
+                            <div id="collapseContent" class="collapse show" role="tabcard" aria-labelledby="collapse">
+                                <!-- Add the content -->
+                                <div class="card-body">
+                                    <div id="faq" role="tablist" aria-multiselectable="true">
+                                            <!-- Generate the collapse card for each model output-->
+                                            <div class="card">
+                                                <div class="card-header" role="tab" id="collapseInsideAttn-GAN">
+                                                    <h5 class="card-title" style="margin-top: 1%;">
+                                                        <a data-toggle="collapse" data-parent="#faq" href="#collapseInsideContentAttn-GAN" aria-expanded="true" aria-controls="collapseInsideContentDM-GAN">Attn-GAN</a>
+                                                    </h5>
+                                                </div>
+                                                <!-- Activate the collapse on if first card-->
+                                                    <div id="collapseInsideContentAttn-GAN" class="collapse show" role="tabcard" aria-labelledby="collapseInsideAttn-GAN">
+                                                        <!-- Add the content -->
+                                                        <div class="card-body">
+                                                                <img  src="{{paths[0]}}" alt="Output" class="img-thumbnail" width="50%" height="50%">
+                                                        </div>
+                                                    </div>
+                                            </div>
+											<div class="card">
+                                                <div class="card-header" role="tab" id="collapseInsideDM-GAN">
+                                                    <h5 class="card-title" style="margin-top: 1%;">
+                                                        <a data-toggle="collapse" data-parent="#faq" href="#collapseInsideContentDM-GAN" aria-expanded="true" aria-controls="collapseInsideContentDM-GAN">DM-GAN</a>
+                                                    </h5>
+                                                </div>
+                                                <!-- Activate the collapse on if first card-->
+                                                    <div id="collapseInsideContentDM_GAN" class="collapse show" role="tabcard" aria-labelledby="collapseInsideDM-GAN">
+                                                        <!-- Add the content -->
+                                                        <div class="card-body">
+                                                                <img  src="{{paths[1]}}" alt="Output" class="img-thumbnail" width="50%" height="50%">
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <hr>
+                                    </div>
+                                </div>
+                            </div>
+							<form method="POST" action="/compare/output" enctype=multipart/form-data id=Compare>
+                                    <h3>Write another text</h3>
+                                    <hr>
+                                    <div class="form-group">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="inputGroup-sizing-default">&gt;</span>
+                                            </div>
+                                            <input type="text" class="form-control" aria-label="Default" name="custom-inputCompare" oninput="customText(this, 'Compare');" aria-describedby="inputGroup-sizing-default" placeholder="Your text here">
+                                        </div>
+                                    </div>
+                                    <button type="reset" onClick="resetButton('Compare);" class="btn btn-danger mb-2">Reset</button>
+                                    <button type="submit" id="CompareSubmit" class="btn btn-primary mb-2">Submit</button>
+                                    <a href="/text_image" class="btn btn-primary mb-2">Go back</a>
+									<p>Note: When you click the submit button, wait a few seconds. The model will be generating the image.</p>
+                                </form>
+                    </div>
+                    <hr>
+            </div>
+        </div>
+    </div>
+    <!-- CONTENT END -->
+    
+    <!-- FOOTER START-->
+    <footer class="page-footer font-small">
+        <!-- COPYRIGHT START -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="http://ixa.si.ehu.es/"> http://ixa.si.ehu.es/</a>
+        </div>
+        <!-- COPYRIGHT END -->
+    </footer>
+    <!-- FOOTER END -->
+</body>
+
+</html>
