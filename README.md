@@ -6,6 +6,22 @@ This project has been created in order to generate images from a given text as i
 
 ## Images
 
+Homepage
+
+![alt text](home.png "Homepage")
+
+Text to image app (the same interface in each section)
+
+![alt text](t2i.png "App")
+
+Output
+
+![alt text](output.png "Output")
+
+Compare section's output
+
+![alt text](compare.png "Compare Section")
+
 ## Dependencies
 
 Python 2.7
@@ -66,6 +82,12 @@ Now, follow this steps:
 
 ## Examples of the models
 
+Text        |  Attn-GAN example              |  DM-GAN example
+-----------:|:------------------------------:|:-------------:
+Several people are on a busy street with lots of animals.  |  ![](1a.png)  |  ![](1b.png)
+People are gathered to see the blue jet plane on display.  |  ![](2a.png)  |  ![](2b.png)
+People shopping for interactive video games at Best Buy.  |  ![](3a.png)  |  ![](3b.png)
+  
 ## Reference
 
  - [AttnGAN: Fine-Grained Text to Image Generation with Attentional Generative Adversarial Networks](https://arxiv.org/abs/1711.10485).
