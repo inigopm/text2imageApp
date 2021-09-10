@@ -90,5 +90,12 @@ People shopping for interactive video games at Best Buy.  |  ![](3a.png)  |  ![]
   
 ## Reference
 
+**Papers**
+
  - [AttnGAN: Fine-Grained Text to Image Generation with Attentional Generative Adversarial Networks](https://arxiv.org/abs/1711.10485).
  - [DM-GAN: Dynamic Memory Generative Adversarial Networks for Text-to-Image Synthesis](https://arxiv.org/abs/1904.01310).
+ 
+ **Code of each model**
+ 
+ - [AttnGAN](https://github.com/taoxugit/AttnGAN)
+ - [DM-GAN](https://github.com/MinfengZhu/DM-GAN)
