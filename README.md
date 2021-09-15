@@ -25,6 +25,7 @@ Compare section's output
 ## Dependencies
 
 Python 2.7
+
 Pytorch
 
 In addition, please install the following packages:
